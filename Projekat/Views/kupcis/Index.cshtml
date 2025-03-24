@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Projekat.Models.kupci>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kupci</title>
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/img/PionirIkona.png")">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:ital,wght@1,300&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/70cce1d5d2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        @{
+            Html.RenderPartial("_NavBar");
+        }
+    </div>
+    <h1 id="meni">Kontakti KUPACA</h1>
+
+    <div class="meni">
+        <button>@Html.ActionLink("Kontakt!", "Create")</button>
+    </div>
+    <table class="baztabela">
+        <tr>
+            <th>
+                <b>Ime i prezime:</b>
+            </th>
+            <th>
+                <b>Email:</b>
+            </th>
+            <th>
+                <b>Poruka od kupca:</b>
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImeIPrezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Poruka)
+                </td>
+                <td style="background:white; ">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <div>
+        @{ Html.RenderPartial("_Footer");}
+    </div>
+    <script src="@Url.Content("~/Scripts/script.js")"></script>
+</body>
+</html>

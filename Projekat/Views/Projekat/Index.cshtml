@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pionir candy</title>
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/img/PionirIkona.png")">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:ital,wght@1,300&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/70cce1d5d2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        @{
+            Html.RenderPartial("_NavBar");
+        }
+    </div>
+    <h1 id="onama">O nama</h1>
+    <div class="prodavnica">
+        <div class="prodavnica-img" style="background-image: url('../../img/Prodavnica.jpg');"></div>
+        <div class="prodavnica-tekst">
+            <p>Prodavnica tvrdih bombona "Pionir" je prodavnica koja prodaje PIONIR-ove tvrde bombone.</p>
+            <p>To su tek gotove najbolje tvrde bombone iz Srbije, pravo iz kompanije "Pionir" sa <i>najpovoljnijim</i> cenema.</p>
+            <p>Prodajemo razne bombone, kao što su na primer:</p>
+            <ul>
+                <li>Negro - <br> najpoznatije i najbolje pionirove bombone, zdrave za vaše grlo!</li>
+                <li>Mentol - <br> fine bombone sa ukusom mentola</li>
+                <li>
+                    Voćne bombone - <br> sa ukusima:
+                    <ul>
+                        <li>Narandže</li>
+                        <li>Limuna</li>
+                        <li>Jagode</li>
+                        <li>Višnje</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                Ukoliko vas zanimaju cene ili slike naših proizvoda, molimo vas da posetite naš <b>meni</b> <br>
+                ili ukoliko želite da nas kontaktirate, posetite <b>kontakt</b>.
+            </p>
+            <br>
+            <p><b>HVALA VAM NA POSETI!</b></p>
+            <P>Radno vreme: <br> 08:00 - 20:00</P>
+        </div>
+        <div class="interier" style="background-image: url('../../img/Slatkisi.jpg');"></div>
+    </div>
+    <div>
+        @{ Html.RenderPartial("_Footer");}
+    </div>
+</body>
+</html>

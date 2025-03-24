@@ -1,0 +1,365 @@
+*{
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+.navbar{
+    width: 100%;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    border: 3px solid red;
+}
+.nav-icon{
+    float: left;
+    width: 10%;
+    height: 100%;
+}
+.nav-icon img{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    animation-name: logo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes logo{
+    50%{
+        left: 50%;
+    }
+}
+.nav-menu{
+    float: right;
+    background-color: red;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    margin: 0px 30px;
+    
+}
+.navbar .nav-menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px 20px;
+}
+.navbar .nav-menu ul li a:hover{
+    background: white;
+    color: red;
+    transition: 0.5s ease;
+}
+#onama{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin: 10px;
+}
+#meni{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin: 10px;
+}
+#kontakt{
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin: 10px;
+}
+
+.prodavnica{
+    background-color: rgb(200,0,0);
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+.prodavnica .prodavnica-img {
+    margin: 30px 15px;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: inline-block;
+}
+.prodavnica .prodavnica-tekst{
+    background-color: antiquewhite;
+    width: 45%;
+    margin: 5px 0px;
+    padding: 10px;
+    display: inline-block;
+    text-align: justify;
+    font-size: 18px;
+}
+.prodavnica .prodavnica-tekst p{
+    margin: 0;
+    padding: 3px;
+}
+.interier{
+    margin: 30px 15px;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.kontakt-forma{
+    width: 100%;
+    height: 450px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leva-forma{
+    width: 50%;
+    height: 100%;
+    box-shadow: rgba(165, 195, 218, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 20%;
+}
+.desna-forma{
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20%;
+}
+.leva-forma h3{
+    text-align: center;
+    font-size: 25px;
+    color: darkred;
+}
+.polja-forme{
+    font-size: 18px;
+}
+.input-polja{
+    width: 300px;
+    margin: 15px auto;
+}
+.input-polja p{
+    margin: 0;
+}
+.input-polja input{
+    width: 280px;
+    padding: 10px;
+    border: 2px solid darkred;
+    border-radius: 10px;
+}
+.input-polja textarea{
+    width: 100%;
+    height: 110px;
+    border: 2px solid darkred;
+    border-radius: 10px;
+}
+.posalji{
+    margin: auto;
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: darkred;
+    border: 2px solid darkred;
+    background-color: white;
+}
+.posalji:hover{
+    background-color: red;
+    color: white;
+}
+
+.meni{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.proizvodi{
+    width: 350px;
+    margin: 10px 20px;
+    height: 500px;
+    border: 3px solid darkred;
+    border-radius: 30px;
+}
+.proizvodi h2{
+    text-align: center;
+    background-color: darkred;
+    color: white;
+    font-size: 35px;
+    margin: 0;
+}
+.proizvod-slika{
+    width: 100%;
+    height: 350px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 2px;
+}
+.proizvodi-info{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.proizvodi-info p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 25px;
+}
+.proizvodi-info p:first-child{
+    color: red;
+    border: 2px solid darkred;
+    width: 70px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:whitesmoke;
+    margin: 10px 100px 0px 100px;
+}
+
+footer{
+    width: 100%;
+    background-color: red;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    margin-top: auto;
+}
+
+.footer-social-icon{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+.footer-social-icon a{
+    font-size: 30px;
+    margin: 0px 15px;
+    color: white;
+    transition: 0.3s ease;
+}
+.footer-social-icon a:hover{
+    color: darkred;
+}
+.baztabela {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    background: darkred;
+}
+th{
+    border:1px solid black;
+    background:lightgreen;
+}
+td {
+    border: 1px solid black;
+    background: lightcoral;
+}
+@media screen and (min-width: 300px) and (max-width:420px)  {
+    @keyframes logo {
+        0%{
+            top:0%;
+            left: 0%;
+        }
+        50%{
+            top: 50%;
+            left: 0%;
+        }
+    }
+    .navbar{
+        height: 150px;
+        border: 5px solid red;
+    }
+    .nav-icon{
+        width: 30%;
+    }
+    .nav-icon img{
+        height: 50%;
+        width: 100%;
+    }
+    .nav-menu{
+        width: 70%;
+        display: inline-block;
+    }
+    .nav-menu ul li{
+        margin: 0px 30px 25px 30px;
+    }
+    .desna-forma{
+        display: none;
+    }
+    .leva-forma{
+        width: 100%;
+    }
+    .prodavnica{
+        display: bloc;
+    }
+    .prodavnica-img{
+        display: block;
+    }
+    .prodavnica-tekst{
+        width: 90%;
+        display: block;
+    }
+    .prodavnica{
+        background-color: rgb(200,0,0);
+        width: 100%;
+        display: block;
+        margin-bottom: 50px;
+    }
+    .prodavnica .prodavnica-img{
+        width: 90%;
+        height: 200px;
+        margin: 5%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+    .prodavnica .prodavnica-tekst{
+        background-color: antiquewhite;
+        width: 90%;
+        padding: 10px;
+        margin: 0% 2.5%;
+        text-align: justify;
+        font-size: 18px;
+    }
+    .prodavnica .prodavnica-tekst p{
+        padding: 3px;
+    }
+    .interier{
+        width: 90%;
+        height: 200px;
+        margin: 5%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+}

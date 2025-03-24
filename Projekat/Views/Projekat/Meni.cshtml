@@ -1,0 +1,88 @@
+﻿@using Projekat.helperi
+
+@{
+    ViewBag.Title = "Meni";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meni</title>
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/img/PionirIkona.png")">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:ital,wght@1,300&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/70cce1d5d2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        @{
+            Html.RenderPartial("_NavBar");
+        }
+    </div>
+    <h1 id="meni" onclick="proracun()">Meni</h1>
+    <div class="meni">
+        <div class="proizvodi" id="negro" onmouseover="prikazi('g')" onmouseout="skloni('g')">
+            <div class="proizvod-slika"
+                 style="background-image: url('../../img/negro.jpg');">
+            </div>
+            <h2>Negro</h2>
+            <div class="proizvodi-info" id="gInfo">
+            </div>
+            <marquee></marquee>
+        </div>
+        <div class="proizvodi" id="mentol" onmouseover="prikazi('m')" onmouseout="skloni('m')">
+            <div class="proizvod-slika"
+                 style="background-image: url(../../img/mentol.jpg);">
+            </div>
+            <h2>Mentol</h2>
+            <div class="proizvodi-info" id="mInfo">
+            </div>
+            <marquee>@helperi.popustCena(ViewBag.Cene[1], 20)</marquee>
+        </div>
+        <div class="proizvodi" id="narandza" onmouseover="prikazi('n')" onmouseout="skloni('n')">
+            <div class="proizvod-slika"
+                 style="background-image: url(../../img/narandza.jpg);">
+            </div>
+            <h2>Narandža</h2>
+            <div class="proizvodi-info" id="nInfo">
+            </div>
+            <marquee>@helperi.popustCena(ViewBag.Cene[2], 50)</marquee>
+        </div>
+        <div class="proizvodi" id="limun" onmouseover="prikazi('l')" onmouseout="skloni('l')">
+            <div class="proizvod-slika"
+                 style="background-image: url(../../img/limun.jpg);">
+            </div>
+            <h2>Limun</h2>
+            <div class="proizvodi-info" id="lInfo">
+            </div>
+            <marquee>@helperi.popustCena(ViewBag.Cene[3], 30)</marquee>
+        </div>
+        <div class="proizvodi" id="jagoda" onmouseover="prikazi('j')" onmouseout="skloni('j')">
+            <div class="proizvod-slika"
+                 style="background-image: url(../../img/jagoda.jpg);">
+            </div>
+            <h2>Jagoda</h2>
+            <div class="proizvodi-info" id="jInfo">
+            </div>
+            <marquee></marquee>
+        </div>
+        <div class="proizvodi" id="visnja" onmouseover="prikazi('v')" onmouseout="skloni('v')">
+            <div class="proizvod-slika"
+                 style="background-image: url(../../img/visnja.jpg);">
+            </div>
+            <h2>Višnja</h2>
+            <div class="proizvodi-info" id="vInfo">
+            </div>
+            <marquee></marquee>
+        </div>
+    </div>
+    <div>
+        @{ Html.RenderPartial("_Footer");}
+    </div>
+    <script src="@Url.Content("~/Scripts/script.js")"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿@model Projekat.Models.kupci
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/img/PionirIkona.png")">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:ital,wght@1,300&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/70cce1d5d2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        @{
+            Html.RenderPartial("_NavBar");
+        }
+    </div>
+    <h1 id="kontakt">Promena</h1>
+
+    <div class="polja-forme">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="input-polja">
+                <p>Ime i prezime: @Html.TextBoxFor(x => x.ImeIPrezime)</p>
+            </div>
+            <div class="input-polja">
+                <p>
+                    Email:
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </p>
+            </div>
+            <div class="input-polja">
+                <p>Vaša poruka:</p>
+                @Html.TextAreaFor(x => x.Poruka)
+            </div>
+            <input type="submit" value="Promeni" class="posalji" />
+
+        }
+    </div>
+    <br />
+    <div>
+        <button>@Html.ActionLink("Kupci", "Index")</button>
+    </div>
+    <div>
+        @{ Html.RenderPartial("_Footer");}
+    </div>
+</body>
+</html>
+
